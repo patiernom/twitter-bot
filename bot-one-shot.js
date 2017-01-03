@@ -6,9 +6,9 @@ T.get('lists/members', { 'slug': 'test', 'owner_screen_name' : 'MPBotterinojs'},
         console.log('error ' + err);
     } else {
         console.log('data: ');
-        console.dir(data);
-        console.log('response: ');
-        console.dir(response);
+        console.dir(data.users);
+        /*console.log('response: ');
+        console.dir(response);*/
     }
 });
 
