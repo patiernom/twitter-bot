@@ -22,11 +22,13 @@ var fs = require('fs'),
     generateTweetPost = function(status) {
         "use strict";
 
+        console.log(status);
+
         T.post('statuses/update', status, function(err, data, http_response) {
             if (err) {
                 console.log('error ' + err);
             } else {
-                console.log(data);
+                console.log('all statuses are update');
             }
         });
     },
@@ -45,6 +47,8 @@ T.post('media/upload', { media_data: b64content }, function (err, data, http_res
             media_id: mediaIdStr,
             alt_text: { text: altText }
         };
+
+    console.log(meta_params);
 
     T.post('media/metadata/create', meta_params, function (err, data, http_response) {
         if (!err) {
