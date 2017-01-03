@@ -16,5 +16,12 @@ function chooseRandom(myArray) {
     return myArray[Math.floor(Math.random() * myArray.length)];
 }
 
-var phrase = chooseRandom(phraseArray) + ", " + chooseRandom(phraseArray);
-Bot.tweet(phrase);
+setInterval(function() {
+    try {
+        var phrase = chooseRandom(phraseArray) + ", " + chooseRandom(phraseArray);
+        Bot.tweet(phrase);
+    }
+    catch (e) {
+        console.log(e);
+    }
+}, 60000* 60);
