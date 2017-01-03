@@ -12,14 +12,16 @@ var Twit = require('twit'),
     generateTweetMessage = function(user) {
         "use strict";
 
-        return "Ciao @" + user.name + " come stai? Mi sembri in ottima forma nonsotante i pranzi e le cene delle feste!";
+        return "@" + user.name + " come stai? Mi sembri in ottima forma nonsotante i pranzi e le cene delle feste!";
     },
     generateTweetPost = function(reply) {
         "use strict";
 
-        T.post('statuses/update', { status: reply }, function(err, data, response) {
+        console.log(reply);
+
+        /*T.post('statuses/update', { status: reply }, function(err, data, response) {
             console.log(data);
-        })
+        })*/
     },
     generateTweet = function(user) {
         "use strict";
