@@ -1,6 +1,6 @@
 var Twit = require('twit');
 var TwitterBot = require('node-twitterbot').TwitterBot;
-var Bot = new TwitterBot(require('./settings'));
+var Bot = new TwitterBot(require('./secret'));
 var phraseArray = [ "hey twitter",
     "im tweeting",
     "tweet tweet",

@@ -1,6 +1,6 @@
 var fs = require('fs'),
     Twit = require('twit'),
-    T = new Twit(require('./settings')),
+    T = new Twit(require('./secret')),
     R = require('ramda'),
     b64content = fs.readFileSync('test.jpg', { encoding: 'base64' });
     getUserData = function(user){

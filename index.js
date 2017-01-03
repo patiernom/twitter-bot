@@ -1,7 +1,7 @@
 //@MPBotterinojs + #testMeNow + <selection> + <handle>
 
 var TwitterPackage = require('twitter'),
-    secret = require("./settings"),
+    secret = require("./secret"),
     Twitter = new TwitterPackage(secret);
 
 // Call the stream function and pass in 'statuses/filter', our filter object, and our callback

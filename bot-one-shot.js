@@ -1,5 +1,5 @@
 var Twit = require('twit'),
-    T = new Twit(require('./settings')),
+    T = new Twit(require('./secret')),
     R = require('ramda'),
     getUserData = function(user){
         "use strict";
