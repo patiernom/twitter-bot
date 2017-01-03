@@ -1,1 +1,1 @@
-worker: node bot-one-shot.js
+worker: node bot-one-shot-with-image.js

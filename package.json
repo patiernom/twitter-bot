@@ -4,7 +4,7 @@
   "description": "A Twitter bot that do some stuff",
   "main": "index.js",
   "scripts": {
-    "start": "node bot-one-shot.js"
+    "start": "node bot-one-shot-with-image.js"
   },
   "repository": {
     "type": "git",
