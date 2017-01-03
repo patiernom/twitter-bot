@@ -56,7 +56,7 @@ var Twit = require('twit'),
     };
 
 stream.on('favorite', function (response) {
-    console.log(response);
+    //console.log(response);
     /* RESPONSE PROPERTY
      *  event --> event name
      *  source
@@ -70,22 +70,22 @@ stream.on('favorite', function (response) {
     var data = {
         event_name: response.event,
         post: {
-          id: response.target_object.id,
+          id: response.target_object.id_str,
           text: response.target_object.text
         },
         member: {
-            id: response.target_object.user.id,
+            id: response.target_object.user.id_str,
             name: response.target_object.user.screen_name
         },
         user: {
-            id: response.source.id,
+            id: response.source.id_str,
             name: response.source.screen_name
         }
     };
 
-    //console.log(data.user.name + ' perform ' + data.event_name + ' for statuses ' + data.post.text);
+    console.log(data.user.name + ' perform ' + data.event_name + ' for statuses ' + data.post.text);
 
-    //evaluateAction(data);
+    evaluateAction(data);
 });
 
 stream.on('error', function (error) {
