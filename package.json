@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/patiernom/twitter-bot.git"
   },
+  "engines": {
+    "node": "4.6.2"
+  },
   "keywords": [
     "node",
     "twitter"
@@ -19,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/patiernom/twitter-bot/issues"
   },
-  "homepage": "https://github.com/patiernom/twitter-bot#readme"
+  "homepage": "https://github.com/patiernom/twitter-bot#readme",
+  "dependencies": {
+    "twitter": "^1.7.0"
+  }
 }
