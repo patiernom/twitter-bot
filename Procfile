@@ -1,1 +1,1 @@
-worker: node bot-one-shot-with-image.js
+worker: node bot-reactive-on-favorite.js
