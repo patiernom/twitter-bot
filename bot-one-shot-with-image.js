@@ -24,13 +24,13 @@ var fs = require('fs'),
 
         console.log(status);
 
-        /*T.post('statuses/update', status, function(err, data, http_response) {
+        T.post('statuses/update', status, function(err, data, http_response) {
             if (err) {
                 console.log('error ' + err);
             } else {
                 console.log('all statuses are update');
             }
-        });*/
+        });
     },
     generateTweet = function(media){
         return function(user) {
@@ -53,7 +53,7 @@ T.post('media/upload', { media_data: b64content }, function (err, data, http_res
     T.post('media/metadata/create', meta_params, function (err, data, http_response) {
         if (!err) {
 
-            console.log('image upload');
+            console.log('image uploaded');
 
             T.get('lists/members', { 'slug': 'test', 'owner_screen_name' : 'MPBotterinojs'}, function(err, data, http_response) {
                 if (err) {
