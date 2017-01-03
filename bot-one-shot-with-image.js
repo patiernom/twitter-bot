@@ -24,13 +24,13 @@ var fs = require('fs'),
 
         console.log(status);
 
-        T.post('statuses/update', status, function(err, data, http_response) {
+        /*T.post('statuses/update', status, function(err, data, http_response) {
             if (err) {
                 console.log('error ' + err);
             } else {
                 console.log('all statuses are update');
             }
-        });
+        });*/
     },
     generateTweet = function(media){
         return function(user) {
