@@ -45,6 +45,8 @@ var Twit = require('twit'),
     evaluateAction = function(data) {
         "use strict";
 
+        console.log('const ' + user.id + ' === ' + data.user.id);
+
         if (user.id === data.user.id ) {
             addUserToList(data, user.selected_list);
             generateTweet(data);
