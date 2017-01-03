@@ -29,20 +29,19 @@ var Twit = require('twit'),
             'screen_name': data.member.name
         };
 
-        console.log(status);
-
-        // T.post('lists/members/create', status, function(err, data, http_response) {
-        //     if (err) {
-        //         console.log('error ' + err);
-        //     } else {
-        //         console.log(user.screen_name + ' is now added to list' + status.slug);
-        //     }
-        // });
+        T.post('lists/members/create', status, function(err, data, http_response) {
+            if (err) {
+                console.log('error ' + err);
+            } else {
+                // console.log(data);
+                console.log(status.screen_name + ' is now added to list' + status.slug);
+            }
+        });
     },
     generateTweet = function(data) {
         "use strict";
 
-        generateTweetPost(generateTweetMessage(data.user));
+        generateTweetPost(generateTweetMessage(data.member));
     },
     evaluateAction = function(data) {
         "use strict";
@@ -51,7 +50,7 @@ var Twit = require('twit'),
 
         if (user.id === data.user.id ) {
             addUserToList(data, user.selected_list);
-            //generateTweet(data);
+            generateTweet(data);
         }
 
         return false;
@@ -84,8 +83,6 @@ stream.on('favorite', function (response) {
             name: response.source.screen_name
         }
     };
-
-    console.log(data);
 
     console.log(data.user.name + ' perform ' + data.event_name + ' for statuses ' + data.post.text);
 
