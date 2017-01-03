@@ -25,6 +25,7 @@
   "homepage": "https://github.com/patiernom/twitter-bot#readme",
   "dependencies": {
     "node-twitterbot": "^0.2.2",
+    "ramda": "^0.23.0",
     "twit": "^2.2.5",
     "twitter": "^1.7.0"
   }
