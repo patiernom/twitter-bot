@@ -24,4 +24,4 @@ setInterval(function() {
     catch (e) {
         console.log(e);
     }
-}, 60000* 60);
+}, 60 * 60 * 2000);
