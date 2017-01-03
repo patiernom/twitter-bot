@@ -56,7 +56,7 @@ var Twit = require('twit'),
     };
 
 stream.on('favorite', function (response) {
-    //console.log(response);
+    console.log(response);
     /* RESPONSE PROPERTY
      *  event --> event name
      *  source
@@ -83,9 +83,9 @@ stream.on('favorite', function (response) {
         }
     };
 
-    console.log(data.user.name + ' perform ' + data.event_name + ' for statuses ' + data.post.text);
+    //console.log(data.user.name + ' perform ' + data.event_name + ' for statuses ' + data.post.text);
 
-    evaluateAction(data);
+    //evaluateAction(data);
 });
 
 stream.on('error', function (error) {
