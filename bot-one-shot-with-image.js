@@ -49,6 +49,8 @@ T.post('media/upload', { media_data: b64content }, function (err, data, http_res
     T.post('media/metadata/create', meta_params, function (err, data, http_response) {
         if (!err) {
 
+            console.log('image upload');
+
             T.get('lists/members', { 'slug': 'test', 'owner_screen_name' : 'MPBotterinojs'}, function(err, data, http_response) {
                 if (err) {
                     console.log('error ' + err);
