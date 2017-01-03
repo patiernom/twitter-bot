@@ -21,7 +21,8 @@ var Twit = require('twit'),
             if (err) {
                 console.log('error ' + err);
             } else {
-                console.log(data);
+                //console.log(data);
+                console.log('all statuses are update');
             }
         });
     },
