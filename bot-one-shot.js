@@ -17,11 +17,13 @@ var Twit = require('twit'),
     generateTweetPost = function(reply) {
         "use strict";
 
-        console.log(reply);
-
-        /*T.post('statuses/update', { status: reply }, function(err, data, response) {
-            console.log(data);
-        })*/
+        T.post('statuses/update', { status: reply }, function(err, data, response) {
+            if (err) {
+                console.log('error ' + err);
+            } else {
+                console.log(data);
+            }
+        });
     },
     generateTweet = function(user) {
         "use strict";
