@@ -1,1 +1,1 @@
-worker: node bot-reactive-on-favorite.js
+worker: node bot-reactive-on-add-to-list.js
