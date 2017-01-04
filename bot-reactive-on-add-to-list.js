@@ -28,7 +28,7 @@ var Twit = require('twit'),
     evaluateAction = function(data) {
         "use strict";
 
-        console.log('const ' + user.id + ' === ' + data.user.id);
+        //console.log('const ' + user.id + ' === ' + data.user.id);
 
         if (user.id === data.user.id ) {
             generateTweet(data);
@@ -38,7 +38,7 @@ var Twit = require('twit'),
     };
 
 stream.on('list_member_added', function (response) {
-    console.log(response);
+    //console.log(response);
     /* RESPONSE PROPERTY
      *  event --> event name
      *  source
@@ -49,23 +49,23 @@ stream.on('list_member_added', function (response) {
      *    text --> text of status
      */
 
-    /*var data = {
+    var data = {
         event_name: response.event,
-        post: {
+        list: {
           id: response.target_object.id_str,
-          text: response.target_object.text
+          name: response.target_object.name
         },
         member: {
-            id: response.target_object.user.id_str,
-            name: response.target_object.user.screen_name
+            id: response.target.id_str,
+            name: response.target.screen_name
         },
         user: {
             id: response.source.id_str,
             name: response.source.screen_name
         }
-    };*/
+    };
 
-    //evaluateAction(data);
+    evaluateAction(data);
 });
 
 stream.on('error', function (error) {
