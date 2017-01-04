@@ -1,1 +1,1 @@
-worker: node bot-reactive-on-add-to-list.js
+worker: node bot-collection.js

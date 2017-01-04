@@ -4,7 +4,7 @@
   "description": "A Twitter bot that do some stuff",
   "main": "index.js",
   "scripts": {
-    "start": "node bot-reactive-on-add-to-list.js"
+    "start": "node bot-collection.js"
   },
   "repository": {
     "type": "git",
